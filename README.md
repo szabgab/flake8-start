@@ -1,5 +1,9 @@
 Starter tool for [flake8](https://flake8.pycqa.org/)
 
+* [flake8 error codes](https://flake8.pycqa.org/en/latest/user/error-codes.html)
+* [flake8-pylint](https://pypi.org/project/flake8-pylint/)
+* [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear)
+
 
 ## Setup
 
