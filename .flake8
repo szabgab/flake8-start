@@ -1,0 +1,10 @@
+# E226 - (1) - missing whitespace around arithmetic operator
+# E265 - (2) - block comment should start with '# '
+# E305 - (1) - expected 2 blank lines after class or function definition, found 1
+# E501 - (4) - line too long (108 > 79 characters)
+# W391 - (1) - blank line at end of file
+
+
+[flake8]
+ignore =
+    *.py E226 E265 E305 E501 W391
