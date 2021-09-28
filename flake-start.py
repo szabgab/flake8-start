@@ -37,7 +37,7 @@ def process(path_to_dir):
 def run_flake8(python_files):
     if not python_files:
         return {}
-    style_guide = flake8.get_style_guide()
+    style_guide = flake8.get_style_guide(select="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z")
     backup = sys.stdout
     sys.stdout = StringIO()
     report = style_guide.check_files(python_files)
