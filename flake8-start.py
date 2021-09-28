@@ -79,7 +79,12 @@ if __name__ == '__main__':
             fh.write(f"# {code} - ({reports[code]}) - {full_text[code]}\n")
         fh.write("\n\n")
         fh.write("[flake8]\n")
+        fh.write("# Ignore some of the flake8 codes\n")
         fh.write("ignore =\n")
-        fh.write("    *.py " + " ".join(sorted(full_text.keys())) + "\n")
+        fh.write("    *.py " + " ".join(sorted(full_text.keys())) + "\n\n")
+        fh.write("# Exclude some directories\n")
+        fh.write("exclude=\n")
+        fh.write("        .git,\n")
+        fh.write("        __pycache__\n\n")
 
 

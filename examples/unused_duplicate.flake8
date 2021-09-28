@@ -5,5 +5,12 @@
 
 
 [flake8]
+# Ignore some of the flake8 codes
 ignore =
     *.py F811 PLC0114 PLC0116 PLE0102
+
+# Exclude some directories
+exclude=
+        .git,
+        __pycache__
+
