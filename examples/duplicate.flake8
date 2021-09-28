@@ -13,3 +13,9 @@ exclude=
         .git,
         __pycache__
 
+# If you manage to fix an error in all the files except a few where you'd like to continue to ignore them, you could use per-
+# per-file-ignores =
+#    examples/*: E402
+
+# Set the max line length to whatever you think is right.
+max-line-length = 79
