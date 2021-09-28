@@ -20,15 +20,15 @@ def process(path_to_dir):
         for entry in rep:
             #print(entry)
             # 2 F401 '.controllers' imported but unused
-            match = re.search(r'^\d+\s(\w+)\s', entry)
+            match = re.search(r'^(\d+)\s(\w+)\s(.*)', entry)
             if not match:
                 print(f"ERROR: Line '{entry}' not matched. Please report to the developers of flake8-start")
                 continue
-            code = match.group(1)
+            count, code, text = match.groups()
             if code not in reports:
-                full_text[code] = entry
+                full_text[code] = text
                 reports[code] = 0
-            reports[code] += 1
+            reports[code] += int(count)
     return full_text, reports
 
 
