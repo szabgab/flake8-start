@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  perl-job:
+  flake8-job:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
