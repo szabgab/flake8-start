@@ -3,6 +3,7 @@ import sys
 import shutil
 import pytest
 
+
 @pytest.mark.parametrize("name", ['duplicate', 'unused_duplicate'])
 def test_duplicate(name, tmpdir):
     print(f'{name} {tmpdir}')
