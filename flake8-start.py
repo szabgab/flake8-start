@@ -77,14 +77,21 @@ if __name__ == '__main__':
     with open(flake8_file, 'w') as fh:
         for code in sorted(full_text.keys()):
             fh.write(f"# {code} - ({reports[code]}) - {full_text[code]}\n")
-        fh.write("\n\n")
-        fh.write("[flake8]\n")
-        fh.write("# Ignore some of the flake8 codes\n")
-        fh.write("ignore =\n")
-        fh.write("    *.py " + " ".join(sorted(full_text.keys())) + "\n\n")
-        fh.write("# Exclude some directories\n")
-        fh.write("exclude=\n")
-        fh.write("        .git,\n")
-        fh.write("        __pycache__\n\n")
+        fh.write(f"""
 
+[flake8]
+# Ignore some of the flake8 codes
+ignore =
+    *.py {" ".join(sorted(full_text.keys()))}
+
+# Exclude some directories
+exclude=
+        .git,
+        __pycache__
+
+""")
+
+
+#        fh.write(per-file-ignores =
+#    examples/*: E402
 
