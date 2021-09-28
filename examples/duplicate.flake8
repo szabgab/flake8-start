@@ -1,0 +1,8 @@
+# PLC0114 - (1) - Missing module docstring (missing-module-docstring)
+# PLC0116 - (2) - Missing function or method docstring (missing-function-docstring)
+# PLE0102 - (1) - function already defined line 1 (function-redefined)
+
+
+[flake8]
+ignore =
+    *.py PLC0114 PLC0116 PLE0102
