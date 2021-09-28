@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  perl-job:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    name: Flake8
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install deps
+        run: |
+          pip install -y flake8
+
+      - name: Run flake8
+        run: |
+            flake8 .
