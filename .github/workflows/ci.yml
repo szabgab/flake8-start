@@ -13,7 +13,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install -y flake8
+          pip install flake8
 
       - name: Run flake8
         run: |
