@@ -50,7 +50,7 @@ def get_python_files(path_to_dir):
     if os.path.isfile(path_to_dir):
         return [path_to_dir]
     python_files = []
-    for dirname, dirs, files in os.walk(path_to_dir):
+    for dirname, _dirs, files in os.walk(path_to_dir):
         for filename in files:
             if not filename.endswith('.py'):
                 continue
