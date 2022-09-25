@@ -2,7 +2,7 @@ from flake8.api import legacy as flake8
 import os
 import sys
 import re
-from io import StringIO
+#from io import StringIO
 
 # Given a directory path, run flake8 in that directory and return the data
 
@@ -38,11 +38,11 @@ def run_flake8(python_files):
     if not python_files:
         return {}
     style_guide = flake8.get_style_guide(select="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z")
-    backup = sys.stdout
-    sys.stdout = StringIO()
+    #backup = sys.stdout
+    #sys.stdout = StringIO()
     report = style_guide.check_files(python_files)
     #    out = sys.stdout.getvalue()
-    sys.stdout = backup
+    #sys.stdout = backup
     return report
 
 
