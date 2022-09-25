@@ -1,3 +1,6 @@
+# This is the flake8 configuration file we use for the flake8-start project
+# We don't want to name it .flake8 so it won't interfere with our tests.
+
 # E226 - (1) - missing whitespace around arithmetic operator
 # E265 - (2) - block comment should start with '# '
 # E305 - (1) - expected 2 blank lines after class or function definition, found 1
