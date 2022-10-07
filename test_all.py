@@ -8,7 +8,7 @@ import pytest
 def test_duplicate(name, tmpdir):
     print(f'{name} {tmpdir}')
     shutil.copy(f'examples/{name}.py', f'{tmpdir}/{name}.py')
-    os.system(f'{sys.executable} flake8-start.py {tmpdir}')
+    os.system(f'{sys.executable} flake8_start.py {tmpdir}')
     with open(f'{tmpdir}/.flake8') as fh:
         actual = fh.readlines()
     with open(f'examples/{name}.flake8') as fh:

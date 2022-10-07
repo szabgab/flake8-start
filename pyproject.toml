@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "flake8-start"
-version = "0.0.1"
+version = "0.0.4"
 authors = [
   { name="Gabor Szabo", email="gabor@szabgab.com" },
 ]
@@ -18,11 +18,8 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
-
 [project.scripts]
-flake8-start = 'flake8-start:run'
+flake8-start = 'flake8_start:cli'
 
 [project.urls]
 "Homepage" = "https://github.com/szabgab/flake8-start"
