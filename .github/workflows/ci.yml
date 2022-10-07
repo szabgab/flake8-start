@@ -27,7 +27,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pit install hatch
+          pip install hatch
       #    pip install -r requirements.txt
       #    pip install pytest
 
