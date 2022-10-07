@@ -25,15 +25,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      #- name: Install deps
-      #  run: |
+      - name: Install deps
+        run: |
+          pit install hatch
       #    pip install -r requirements.txt
       #    pip install pytest
 
       - name: Run tests
         run: |
-            pytest -sv
+            hatch run pytest -sv
 
       - name: Run flake8
         run: |
-            flake8 --config flake8-start-config .
+            hatch run flake8 --config flake8-start-config .

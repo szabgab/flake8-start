@@ -17,6 +17,11 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "flake8",
+    "flake8-pylint",
+    "flake8-bugbear",
+]
 
 [project.scripts]
 flake8-start = 'flake8_start:cli'
