@@ -59,6 +59,7 @@ def get_python_files(path_to_dir):
             python_files.append(path)
     return python_files
 
+
 def cli():
     if len(sys.argv) != 2:
         exit(f"Usage: {sys.argv[0]} PATH")
