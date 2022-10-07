@@ -59,8 +59,7 @@ def get_python_files(path_to_dir):
             python_files.append(path)
     return python_files
 
-# '/home/gabor/x/e-commerce'
-if __name__ == '__main__':
+def cli():
     if len(sys.argv) != 2:
         exit(f"Usage: {sys.argv[0]} PATH")
     source_path = sys.argv[1]
@@ -96,6 +95,11 @@ exclude=
 # Set the max line length to whatever you think is right.
 max-line-length = 79
 """)
+
+
+# '/home/gabor/x/e-commerce'
+if __name__ == '__main__':
+    cli()
 
 
 

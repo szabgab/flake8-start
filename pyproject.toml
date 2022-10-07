@@ -11,11 +11,18 @@ authors = [
 description = "A command line tool to create flake8 configuration file"
 readme = "README.md"
 requires-python = ">=3.7"
+keywords = ["flake8", "linter"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.scripts]
+flake8-start = 'flake8-start:run'
 
 [project.urls]
 "Homepage" = "https://github.com/szabgab/flake8-start"
